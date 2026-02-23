@@ -1,6 +1,6 @@
 package com.cometgames.filepathpicker.managed.data;
 
-public interface IFilePathPickerUnityCallback
+public interface IFileOpenDialogCallback
 {
     public void OnPickedPaths(String[] paths);
 }

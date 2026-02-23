@@ -1,0 +1,23 @@
+{
+    "name": "FilePathPicker.Runtime.Extensions",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b5c9be0569461194b8c5c73e8e83f106",
+        "GUID:fb37933c160bd11479d91a44c9ca1a97",
+        "GUID:1655b1638b671704d979914c5599e4ed"
+    ],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "WindowsStandalone32",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
