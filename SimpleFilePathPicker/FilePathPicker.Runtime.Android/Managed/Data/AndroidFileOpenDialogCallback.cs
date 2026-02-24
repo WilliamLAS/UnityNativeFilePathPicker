@@ -1,10 +1,12 @@
 using FilePathPicker.Runtime.Managed.Data;
 using FilePathPicker.Runtime.Unmanaged.Data;
-using System;
 using UnityEngine;
 
 namespace FilePathPicker.Runtime.Android.Managed.Data
 {
+    /// <summary>
+    /// Java Native Interface: public interface IFileOpenDialogCallback
+    /// </summary>
     public class AndroidFileOpenDialogCallback : AndroidJavaProxy
     {
         private readonly PickFilePathOperation m_PickFilePathOperation;
@@ -20,7 +22,7 @@ namespace FilePathPicker.Runtime.Android.Managed.Data
 
         // Update
         /// <summary>
-        /// Java Native Interface: public void OnPickedPaths(String[] paths);
+        /// Java Native Interface: public void OnPickedPaths(String[]);
         /// </summary>
         private void OnPickedPaths(string[] paths)
         {

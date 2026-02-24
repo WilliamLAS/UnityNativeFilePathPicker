@@ -33,7 +33,7 @@ namespace FilePathPicker.Runtime.Unmanaged.Data
 #else
             Debug.LogError(
                 @$"Platform not supported. You can solve with these steps:
-                1) Create file picker for {Application.platform}
+                1) Create picker for {Application.platform}
             ");
             return null;
 #endif

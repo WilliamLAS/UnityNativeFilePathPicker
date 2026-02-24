@@ -7,6 +7,9 @@ namespace FilePathPicker.Runtime.Windows.Managed.Data
     /// <summary>
     /// Represents a file.
     /// </summary>
+    /// <remarks>
+    /// Since its a COM object, order of functions matters.
+    /// </remarks>
     [ComImport]
     [Guid("43826D1E-E718-42EE-BC55-A1E261C37BFE")]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]

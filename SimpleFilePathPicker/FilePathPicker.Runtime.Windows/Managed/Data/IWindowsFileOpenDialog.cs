@@ -4,6 +4,9 @@ using System.Runtime.InteropServices;
 
 namespace FilePathPicker.Runtime.Windows.Managed.Data
 {
+    /// <remarks>
+    /// Since its a COM object, order of functions matters.
+    /// </remarks>
     [ComImport]
     [Guid("d57c7288-d4ad-4768-be02-9d969532d960")]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]

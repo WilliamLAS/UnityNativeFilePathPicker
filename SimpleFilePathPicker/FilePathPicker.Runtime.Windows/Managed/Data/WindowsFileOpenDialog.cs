@@ -3,6 +3,9 @@ using System.Runtime.InteropServices;
 
 namespace FilePathPicker.Runtime.Windows.Managed.Data
 {
+    /// <summary>
+    /// Internally it is an <see cref="IWindowsFileOpenDialog"/>
+    /// </summary>
     [ComImport]
     [Guid("DC1C5A9C-E88A-4DDE-A5A1-60F82A20AEF7")]
     [ClassInterface(ClassInterfaceType.None)]

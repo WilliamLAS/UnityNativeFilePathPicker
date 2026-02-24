@@ -2,8 +2,8 @@
     "name": "FilePathPicker.Runtime.Windows",
     "rootNamespace": "",
     "references": [
-        "GUID:b5c9be0569461194b8c5c73e8e83f106",
-        "GUID:e0cd26848372d4e5c891c569017e11f1"
+        "FilePathPicker.Runtime",
+        "Unity.Collections"
     ],
     "includePlatforms": [
         "Editor",

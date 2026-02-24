@@ -3,6 +3,9 @@ using System.Runtime.InteropServices;
 
 namespace FilePathPicker.Runtime.Windows.Managed.Data
 {
+    /// <remarks>
+    /// Since its a COM object, order of functions matters.
+    /// </remarks>
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     internal readonly struct WindowsFileType
     {

@@ -3,8 +3,14 @@ using UnityEngine;
 
 namespace FilePathPicker.Runtime.Android.Managed.Data
 {
+    /// <summary>
+    /// Java Native Interface: public class FileOpenDialogOptionFlags
+    /// </summary>
     internal class AndroidFileOpenDialogOptions : AndroidJavaObject
     {
+        /// <summary>
+        /// Java Native Interface: public int Value
+        /// </summary>
         public int Value
         {
             get => Get<int>(nameof(Value));
