@@ -26,9 +26,6 @@ jobs:
       - name: Restore Unity Project
         run: dotnet restore SimpleFilePathPicker/UnityNativeFilePathPicker.csproj
 
-      - name: Build Unity Project
-        run: dotnet build SimpleFilePathPicker/UnityNativeFilePathPicker.csproj -c Release --no-restore
-
       - name: Pack Unity Project
         run: dotnet pack SimpleFilePathPicker/UnityNativeFilePathPicker.csproj -c Release --no-build
 
