@@ -14,9 +14,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Create ZIP
-        run: |
-          run: Compress-Archive -Path SimpleFilePathPicker\* -DestinationPath output\SimpleFilePathPicker.zip
-          shell: powershell
+        run: Compress-Archive -Path SimpleFilePathPicker\* -DestinationPath output\SimpleFilePathPicker.zip
+        shell: powershell
 
       - name: Create or update Release
         uses: softprops/action-gh-release@v1
