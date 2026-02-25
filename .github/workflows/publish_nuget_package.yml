@@ -1,0 +1,38 @@
+name: Publish NuGet Package
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  publish:
+    runs-on: windows-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore Unity Project
+        run: dotnet restore SimpleFilePathPicker/UnityNativeFilePathPicker.csproj
+
+      - name: Build Unity Project
+        run: dotnet build SimpleFilePathPicker/UnityNativeFilePathPicker.csproj -c Release --no-restore
+
+      - name: Pack Unity Project
+        run: dotnet pack SimpleFilePathPicker/UnityNativeFilePathPicker.csproj -c Release --no-build
+
+      - name: Publish to GitHub Packages
+        run: dotnet nuget push "SimpleFilePathPicker/bin/Release/*.nupkg" \
+              --source "https://nuget.pkg.github.com/WilliamLAS/index.json" \
+              --api-key ${{ secrets.GITHUB_TOKEN }}
