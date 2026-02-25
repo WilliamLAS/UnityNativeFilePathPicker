@@ -15,8 +15,8 @@ jobs:
 
       - name: Create ZIP
         run: |
-          mkdir -p output
-          zip -r output/SimpleFilePathPicker.zip SimpleFilePathPicker/
+          run: Compress-Archive -Path SimpleFilePathPicker\* -DestinationPath output\SimpleFilePathPicker.zip
+          shell: powershell
 
       - name: Create or update Release
         uses: softprops/action-gh-release@v1
