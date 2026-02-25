@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Zip</OutputType>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageId>UnityNativeFilePathPicker</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Yunus YILDIZ (William)</Authors>
+    <Company>Comet Games</Company>
+    <PackageDescription>Open source native file path picker.</PackageDescription>
+    <RepositoryUrl>https://github.com/WilliamLAS/UnityNativeFilePathPicker</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>
