@@ -51,10 +51,9 @@ public class FileOpenDialog
     {
         try
         {
-            String safeFileName = System.currentTimeMillis() + "_" + GetFileName(uri);
-            File cacheFile = new File(SelectedFilePathDirectory, safeFileName);
+            File cachedFile = new File(SelectedFilePathDirectory, GetFileName(uri));
             InputStream inputStream = m_ResultListenerFragmentActivity.getContentResolver().openInputStream(uri);
-            FileOutputStream outputStream = new FileOutputStream(cacheFile);
+            FileOutputStream outputStream = new FileOutputStream(cachedFile, false);
 
             byte[] readBytesAtOnce = new byte[4096];
             int length;
@@ -66,9 +65,7 @@ public class FileOpenDialog
 
             inputStream.close();
             outputStream.close();
-
-            return cacheFile.getAbsolutePath();
-
+            return cachedFile.getAbsolutePath();
         }
         catch (Exception e)
         {
