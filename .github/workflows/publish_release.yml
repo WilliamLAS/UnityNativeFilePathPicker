@@ -1,0 +1,26 @@
+name: Publish Release
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  zip-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create ZIP
+        run: |
+          mkdir -p output
+          zip -r output/SimpleFilePathPicker.zip SimpleFilePathPicker/
+
+      - name: Create or update Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: latest
+          name: "SimpleFilePathPicker ZIP"
+          files: output/SimpleFilePathPicker.zip
