@@ -24,8 +24,14 @@ namespace FilePathPicker.Runtime.Unmanaged.Data
         /// <para>On Android you can specify one or more MIME types, e.g.
         /// <c>image/png</c>. Additionally, wildcard characters can be used, e.g. <c>image/*</c></para>
         /// <para>On iOS, you can specify <c>UTType</c> constants, e.g. <c>UTType.Image</c>.</para>
-        /// <para>On Windows, you can specify a list of extensions, like this: <c>".jpg", ".png"</c>.</para>
+        /// <para>On Windows, you can specify a list of extensions, like this: <c>"*.jpg", "*.png"</c>.</para>
         ///</remarks>
         public FixedList512Bytes<FileType> FileTypes;
+
+        /// <summary>
+        /// To ensure the security of the file, you wont get the actual file path.
+        /// Instead, the system will create a copy of that file at that directory.
+        /// </summary>
+        public FixedString128Bytes SelectedFilePathDirectory;
     }
 }

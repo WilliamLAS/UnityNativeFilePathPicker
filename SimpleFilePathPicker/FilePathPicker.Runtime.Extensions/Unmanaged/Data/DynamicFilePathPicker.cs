@@ -7,9 +7,9 @@ using FilePathPicker.Runtime.Android.Unmanaged.Data;
 using FilePathPicker.Runtime.Managed.Data;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using FilePathPicker.Runtime.Unmanaged.Data;
 
-
-namespace FilePathPicker.Runtime.Unmanaged.Data
+namespace FilePathPicker.Runtime.Extensions.Unmanaged.Data
 {
     /// <inheritdoc cref="IFilePathPicker"/>
 	public struct DynamicFilePathPicker : IFilePathPicker

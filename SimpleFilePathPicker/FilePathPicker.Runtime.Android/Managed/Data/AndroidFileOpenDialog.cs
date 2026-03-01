@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Android;
 
@@ -14,6 +15,14 @@ namespace FilePathPicker.Runtime.Android.Managed.Data
         public string[] MIMEFileTypes
         {
             set => Set(nameof(MIMEFileTypes), value);
+        }
+
+        /// <summary>
+        /// Java Native Interface: public String SelectedFilePathDirectory
+        /// </summary>
+        public string SelectedFilePathDirectory
+        {
+            set => Set(nameof(SelectedFilePathDirectory), value);
         }
 
         /// <summary>

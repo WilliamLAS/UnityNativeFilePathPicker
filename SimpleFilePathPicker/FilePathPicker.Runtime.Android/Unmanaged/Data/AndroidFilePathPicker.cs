@@ -31,6 +31,7 @@ namespace FilePathPicker.Runtime.Android.Unmanaged.Data
                 dialog.MIMEFileTypes = fileTypes;
             }
 
+            dialog.SelectedFilePathDirectory = operation.Options.SelectedFilePathDirectory.ToString();
             return dialog;
         }
 

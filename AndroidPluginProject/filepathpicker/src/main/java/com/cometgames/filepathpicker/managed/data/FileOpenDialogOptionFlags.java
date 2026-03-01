@@ -1,5 +1,8 @@
 package com.cometgames.filepathpicker.managed.data;
 
+/// <summary>
+/// Structure for C# .NET, manipulated by C# .NET.
+/// </summary>
 public class FileOpenDialogOptionFlags
 {
     public static final int None = 0;
